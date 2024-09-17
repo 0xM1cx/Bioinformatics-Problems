@@ -1,4 +1,8 @@
+import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+
 def sol():
     with open('data.txt') as f:
         content = f.read().split(" ")
@@ -16,7 +20,6 @@ def sol():
 
 
 def graph():
-    import numpy as np
 
     # Generate sample data for sinusoidal waves
     wavelengths = np.linspace(400, 700, 1000)  # Visible light spectrum (400-700 nm)
@@ -44,7 +47,7 @@ def graph():
 
 
 def plot_spherical_waves():
-    import numpy as np
+
 
     # Generate sample data for spherical waves
     r = np.linspace(0, 10, 100)
@@ -79,8 +82,7 @@ def plot_spherical_waves():
 
 
 def plot_3d_altitude_model():
-    import numpy as np
-    from mpl_toolkits.mplot3d import Axes3D
+   
 
     # Generate random data for altitude model
     x = np.random.uniform(-5, 5, (100, 100))
@@ -120,4 +122,4 @@ def plot_3d_altitude_model():
     plt.show()
 
 # Call the function to display the 3D altitude model
-plot_3d_altitude_model()
+graph()
